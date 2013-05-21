@@ -57,6 +57,11 @@ function hr_tools_install_tasks($install_state) {
     'hr_tools_enable_theme' => array(
       'display_name' => st('Enable default themes'),
     ),
+    'hr_tools_import_vocabularies_batch' => array(
+      'display_name' => st('Import terms'),
+      'type' => 'batch',
+    ),
+    
   );
   return $tasks;
 }
@@ -83,4 +88,24 @@ function hr_tools_enable_theme() {
 
   // Disable the default Bartik theme
   theme_disable(array('bartik'));
+}
+
+
+/**
+ * Task callback for installing vocabularies
+ */
+function hr_tools_import_vocabularies_batch() {
+  $batch = array(
+    'title' => t('Importing taxonomy terms'),
+    'operations' => array(
+      array('hr_tools_import_vocabularies', array()),
+    ),
+    'finished' => 'hr_tools_import_vocabularies_finished',
+    'title' => t('Import terms'),
+    'init_message' => t('Starting import.'),
+    'progress_message' => t('Processed @current out of @total.'),
+    'error_message' => t('HR Tools vocabularies import batch has encountered an error.'),
+    'file' => drupal_get_path('profile', 'hr_tools') . '/hr_tools.install_vocabularies.inc',
+  );
+  return $batch;
 }
