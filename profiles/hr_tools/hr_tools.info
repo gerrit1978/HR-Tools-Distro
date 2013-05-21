@@ -80,6 +80,7 @@ dependencies[] = flag
 
 ; HR Tools
 dependencies[] = hr_tools_vocabularies
+dependencies[] = hr_tools_jobs
 
 ; Message
 dependencies[] = message
