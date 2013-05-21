@@ -1,0 +1,12 @@
+name = Omega
+description = Omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+
+; Information added by drush on 2013-05-20
+version = ""
+project = "omega"
+datestamp = "1369067307"
+
