@@ -13,8 +13,6 @@ function hr_tools_import_vocabularies(&$context) {
   
     $vocs = taxonomy_vocabulary_load_multiple(FALSE);
     
-    exit('hier aangekomen');
-    
     $context['sandbox']['progress'] = 0;
     $context['sandbox']['current_node'] = 0;
     $context['sandbox']['max'] = count($vocs);

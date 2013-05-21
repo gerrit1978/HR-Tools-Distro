@@ -54,6 +54,10 @@ function hr_tools_install_configure_form_submit(&$form, &$form_state) {
  */
 function hr_tools_install_tasks($install_state) {
   $tasks = array(
+    'hr_tools_install_additional_modules' => array(
+      'display_name' => st('Install additional modules'),
+      'type' => 'batch',
+    ),
     'hr_tools_enable_theme' => array(
       'display_name' => st('Enable default themes'),
     ),
@@ -64,6 +68,103 @@ function hr_tools_install_tasks($install_state) {
     
   );
   return $tasks;
+}
+
+/**
+ * Task callback for installing additional modules
+ */
+function hr_tools_install_additional_modules() {
+
+  $modules = array(
+
+    // Install default core modules.
+    'contextual',
+    'dashboard',
+    'dblog',
+    'shortcut',
+    'overlay',
+    'field_ui',
+
+    // Install default contrib modules.
+    'admin_menu_toolbar',
+    'rules_admin',
+    'views_ui',
+    'taxonomy_manager',
+    'colorbox',
+    'context_ui',
+    'pathauto',
+    'facetapi_pretty_paths',
+    'colorbox',
+    'context_ui',
+    'rules_admin',
+    'views_ui',
+    'wysiwyg',
+    'block_class',
+    
+    // HR Tools Features
+    'hr_tools_vocabularies',
+  );
+
+  // Resolve the dependencies now, so that module_enable() doesn't need
+  // to do it later for each individual module (which kills performance).
+  $files = system_rebuild_module_data();
+  $modules_sorted = array();
+  foreach ($modules as $module) {
+    if ($files[$module]->requires) {
+      // Create a list of dependencies that haven't been installed yet.
+      $dependencies = array_keys($files[$module]->requires);
+      $dependencies = array_filter($dependencies, '_hr_tools_filter_dependencies');
+      // Add them to the module list.
+      $modules = array_merge($modules, $dependencies);
+    }
+  }
+  $modules = array_unique($modules);
+  foreach ($modules as $module) {
+    $modules_sorted[$module] = $files[$module]->sort;
+  }
+  arsort($modules_sorted);
+
+  $operations = array();
+  // Enable the selected modules.
+  foreach ($modules_sorted as $module => $weight) {
+    $operations[] = array('_hr_tools_enable_module', array($module, $files[$module]->info['name']));
+  }
+
+  $batch = array(
+    'title' => t('Installing additional modules'),
+    'operations' => $operations,
+    'file' => drupal_get_path('profile', 'hr_tools') . '/hr_tools.install_callbacks.inc',
+  );
+
+  return $batch;
+
+}
+
+/**
+ * array_filter() callback used to filter out already installed dependencies.
+ */
+function _hr_tools_filter_dependencies($dependency) {
+  return !module_exists($dependency);
+}
+
+
+/**
+ * Task callback for installing vocabularies
+ */
+function hr_tools_import_vocabularies_batch() {
+  $batch = array(
+    'title' => t('Importing taxonomy terms'),
+    'operations' => array(
+      array('hr_tools_import_vocabularies', array()),
+    ),
+    'finished' => 'hr_tools_import_vocabularies_finished',
+    'title' => t('Import terms'),
+    'init_message' => t('Starting import.'),
+    'progress_message' => t('Processed @current out of @total.'),
+    'error_message' => t('HR Tools vocabularies import batch has encountered an error.'),
+    'file' => drupal_get_path('profile', 'hr_tools') . '/hr_tools.install_vocabularies.inc',
+  );
+  return $batch;
 }
 
 
@@ -88,24 +189,4 @@ function hr_tools_enable_theme() {
 
   // Disable the default Bartik theme
   theme_disable(array('bartik'));
-}
-
-
-/**
- * Task callback for installing vocabularies
- */
-function hr_tools_import_vocabularies_batch() {
-  $batch = array(
-    'title' => t('Importing taxonomy terms'),
-    'operations' => array(
-      array('hr_tools_import_vocabularies', array()),
-    ),
-    'finished' => 'hr_tools_import_vocabularies_finished',
-    'title' => t('Import terms'),
-    'init_message' => t('Starting import.'),
-    'progress_message' => t('Processed @current out of @total.'),
-    'error_message' => t('HR Tools vocabularies import batch has encountered an error.'),
-    'file' => drupal_get_path('profile', 'hr_tools') . '/hr_tools.install_vocabularies.inc',
-  );
-  return $batch;
 }

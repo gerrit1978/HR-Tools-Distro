@@ -77,6 +77,10 @@ dependencies[] = field_permissions
 dependencies[] = link
 ; Flags
 dependencies[] = flag
+
+; HR Tools
+dependencies[] = hr_tools_vocabularies
+
 ; Message
 dependencies[] = message
 ; Other
