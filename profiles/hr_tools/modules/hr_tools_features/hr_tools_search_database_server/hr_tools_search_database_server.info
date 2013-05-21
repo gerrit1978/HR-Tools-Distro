@@ -1,0 +1,11 @@
+name = HR Tools Search Database Server
+description = Database Server Search
+core = 7.x
+package = HR Tools
+version = 7.x-1.0
+project = hr_tools_search_database_server
+dependencies[] = entity
+dependencies[] = search_api
+dependencies[] = search_api_db
+features[features_api][] = api:1
+features[search_api_server][] = search_db

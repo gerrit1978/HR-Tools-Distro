@@ -103,7 +103,9 @@ function hr_tools_install_additional_modules() {
     
     // HR Tools Features
     'hr_tools_vocabularies',
-    'hr_tools_jobs',
+    'hr_tools_search_database_server',
+    'hr_tools_job_types',
+    'hr_tools_job_search'
   );
 
   // Resolve the dependencies now, so that module_enable() doesn't need

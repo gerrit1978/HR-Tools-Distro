@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HR Tools Search Database Server feature.
+ */
+
+include_once 'hr_tools_search_database_server.features.inc';

@@ -1,0 +1,10 @@
+name = HR Tools Job Search
+description = Search Index for Jobs
+core = 7.x
+package = HR Tools
+version = 7.x-1.0
+project = hr_tools_job_search
+dependencies[] = entity
+dependencies[] = search_api
+features[features_api][] = api:1
+features[search_api_index][] = job_index

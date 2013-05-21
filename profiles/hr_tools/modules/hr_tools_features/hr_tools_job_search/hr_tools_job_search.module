@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HR Tools Job Search feature.
+ */
+
+include_once 'hr_tools_job_search.features.inc';
