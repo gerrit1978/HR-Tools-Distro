@@ -15,6 +15,13 @@ function hr_tools_job_ctools_plugin_api() {
 }
 
 /**
+ * Implements hook_views_api().
+ */
+function hr_tools_job_views_api() {
+  return array("version" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function hr_tools_job_node_info() {
