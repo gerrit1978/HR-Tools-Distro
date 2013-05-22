@@ -100,6 +100,7 @@ function hr_tools_install_additional_modules() {
     'views_ui',
     'semanticviews',
     'ckeditor',
+    'ckeditor_link',
     'imce',
     'block_class',
     
