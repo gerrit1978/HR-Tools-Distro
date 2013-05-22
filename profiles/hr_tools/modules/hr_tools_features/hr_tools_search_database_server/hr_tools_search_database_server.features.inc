@@ -77,6 +77,76 @@ function hr_tools_search_database_server_default_search_api_server() {
             "table" : "search_api_db_job_index_field_job_skills_it",
             "type" : "list\\u003Cinteger\\u003E",
             "boost" : "1.0"
+          },
+          "type" : {
+            "table" : "search_api_db_job_index_type",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "status" : {
+            "table" : "search_api_db_job_index_status",
+            "type" : "boolean",
+            "boost" : "1.0"
+          },
+          "promote" : {
+            "table" : "search_api_db_job_index_promote",
+            "type" : "boolean",
+            "boost" : "1.0"
+          },
+          "sticky" : {
+            "table" : "search_api_db_job_index_sticky",
+            "type" : "boolean",
+            "boost" : "1.0"
+          },
+          "created" : {
+            "table" : "search_api_db_job_index_created",
+            "type" : "date",
+            "boost" : "1.0"
+          },
+          "changed" : {
+            "table" : "search_api_db_job_index_changed",
+            "type" : "date",
+            "boost" : "1.0"
+          },
+          "author" : {
+            "table" : "search_api_db_job_index_author",
+            "type" : "integer",
+            "boost" : "1.0"
+          },
+          "field_job_workflow_state" : {
+            "table" : "search_api_db_job_index_field_job_workflow_state",
+            "type" : "string",
+            "boost" : "1.0"
+          },
+          "field_job_employment_type:parents_all" : {
+            "table" : "search_api_db_job_index_field_job_employment_type_parents_all",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
+          },
+          "field_job_fields_of_study:parents_all" : {
+            "table" : "search_api_db_job_index_field_job_fields_of_study_parents_all",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
+          },
+          "field_job_languages:parents_all" : {
+            "table" : "search_api_db_job_index_field_job_languages_parents_all",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
+          },
+          "field_job_occupational_fields:parents_all" : {
+            "table" : "search_api_db_job_index_field_job_occupational_fields_parents_a",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
+          },
+          "field_job_skills_general:parents_all" : {
+            "table" : "search_api_db_job_index_field_job_skills_general_parents_all",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
+          },
+          "field_job_skills_it:parents_all" : {
+            "table" : "search_api_db_job_index_field_job_skills_it_parents_all",
+            "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+            "boost" : "1.0"
           }
         }
       }

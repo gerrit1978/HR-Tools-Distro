@@ -19,6 +19,13 @@ function hr_tools_job_search_default_search_api_index() {
       "index_directly" : 1,
       "cron_limit" : "50",
       "fields" : {
+        "type" : { "type" : "string" },
+        "status" : { "type" : "boolean" },
+        "promote" : { "type" : "boolean" },
+        "sticky" : { "type" : "boolean" },
+        "created" : { "type" : "date" },
+        "changed" : { "type" : "date" },
+        "author" : { "type" : "integer", "entity_type" : "user" },
         "field_job_company" : { "type" : "text" },
         "field_job_company_name" : { "type" : "text" },
         "field_job_description" : { "type" : "text" },
@@ -30,7 +37,32 @@ function hr_tools_job_search_default_search_api_index() {
         "field_job_required_degree_level" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_job_skills_general" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_job_skills_it" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "search_api_language" : { "type" : "string" }
+        "field_job_workflow_state" : { "type" : "string" },
+        "search_api_language" : { "type" : "string" },
+        "field_job_employment_type:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        },
+        "field_job_fields_of_study:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        },
+        "field_job_languages:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        },
+        "field_job_occupational_fields:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        },
+        "field_job_skills_general:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        },
+        "field_job_skills_it:parents_all" : {
+          "type" : "list\\u003Clist\\u003Cinteger\\u003E\\u003E",
+          "entity_type" : "taxonomy_term"
+        }
       },
       "data_alter_callbacks" : {
         "search_api_alter_bundle_filter" : {
