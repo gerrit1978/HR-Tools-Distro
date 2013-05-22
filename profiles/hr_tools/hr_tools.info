@@ -81,7 +81,7 @@ dependencies[] = flag
 ; HR Tools Features
 dependencies[] = hr_tools_vocabularies
 dependencies[] = hr_tools_search_database_server
-dependencies[] = hr_tools_job_types
+dependencies[] = hr_tools_job
 dependencies[] = hr_tools_job_search
 
 ; Message
