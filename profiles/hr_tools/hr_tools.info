@@ -127,7 +127,8 @@ dependencies[] = taxonomy_csv
 dependencies[] = taxonomy_manager
 ; User interface
 dependencies[] = autocomplete_deluxe
-dependencies[] = wysiwyg
+dependencies[] = ckeditor
+dependencies[] = imce
 ; Views
 dependencies[] = views
 dependencies[] = views_bulk_operations
