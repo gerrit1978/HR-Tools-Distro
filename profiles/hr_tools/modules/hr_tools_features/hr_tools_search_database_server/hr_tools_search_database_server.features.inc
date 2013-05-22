@@ -18,6 +18,11 @@ function hr_tools_search_database_server_default_search_api_server() {
       "database" : "default:default",
       "min_chars" : "1",
       "indexes" : { "job_index" : {
+          "search_api_language" : {
+            "table" : "search_api_db_job_index_search_api_language",
+            "type" : "string",
+            "boost" : "1.0"
+          },
           "field_job_company" : {
             "table" : "search_api_db_job_index_field_job_company",
             "type" : "text",
@@ -50,7 +55,7 @@ function hr_tools_search_database_server_default_search_api_server() {
           },
           "field_job_location" : {
             "table" : "search_api_db_job_index_field_job_location",
-            "type" : "text",
+            "type" : "string",
             "boost" : "1.0"
           },
           "field_job_occupational_fields" : {
@@ -71,11 +76,6 @@ function hr_tools_search_database_server_default_search_api_server() {
           "field_job_skills_it" : {
             "table" : "search_api_db_job_index_field_job_skills_it",
             "type" : "list\\u003Cinteger\\u003E",
-            "boost" : "1.0"
-          },
-          "search_api_language" : {
-            "table" : "search_api_db_job_index_search_api_language",
-            "type" : "string",
             "boost" : "1.0"
           }
         }

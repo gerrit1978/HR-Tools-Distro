@@ -98,6 +98,7 @@ function hr_tools_install_additional_modules() {
     'context_ui',
     'rules_admin',
     'views_ui',
+    'semanticviews',
     'wysiwyg',
     'block_class',
     

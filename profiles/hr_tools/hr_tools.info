@@ -132,6 +132,7 @@ dependencies[] = wysiwyg
 dependencies[] = views
 dependencies[] = views_bulk_operations
 dependencies[] = views_ui
+dependencies[] = semanticviews
 ; Features
 dependencies[] = features
 

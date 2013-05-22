@@ -25,7 +25,7 @@ function hr_tools_job_search_default_search_api_index() {
         "field_job_employment_type" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_job_fields_of_study" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_job_languages" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
-        "field_job_location" : { "type" : "text" },
+        "field_job_location" : { "type" : "string" },
         "field_job_occupational_fields" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_job_required_degree_level" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
         "field_job_skills_general" : { "type" : "list\\u003Cinteger\\u003E", "entity_type" : "taxonomy_term" },
