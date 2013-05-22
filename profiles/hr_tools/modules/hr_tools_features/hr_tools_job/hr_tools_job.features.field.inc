@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * hr_tools_job_types.features.field.inc
+ * hr_tools_job.features.field.inc
  */
 
 /**
  * Implements hook_field_default_fields().
  */
-function hr_tools_job_types_field_default_fields() {
+function hr_tools_job_field_default_fields() {
   $fields = array();
 
   // Exported field: 'node-job_external-field_job_application_email'.

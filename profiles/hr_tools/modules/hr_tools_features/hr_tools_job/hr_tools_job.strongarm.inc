@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * hr_tools_job_types.strongarm.inc
+ * hr_tools_job.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function hr_tools_job_types_strongarm() {
+function hr_tools_job_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();
