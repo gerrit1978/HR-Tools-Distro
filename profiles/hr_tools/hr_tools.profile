@@ -107,7 +107,7 @@ function hr_tools_install_additional_modules() {
     // HR Tools Features
     'hr_tools_vocabularies',
     'hr_tools_search_database_server',
-    'hr_tools_job_types',
+    'hr_tools_job',
     'hr_tools_job_search',
     'hr_tools_content_authoring',
   );
