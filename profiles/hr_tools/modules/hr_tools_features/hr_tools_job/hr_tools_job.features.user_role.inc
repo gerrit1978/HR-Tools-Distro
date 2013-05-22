@@ -13,14 +13,14 @@ function hr_tools_job_user_default_roles() {
   // Exported role: job administrator.
   $roles['job administrator'] = array(
     'name' => 'job administrator',
-    'weight' => '3',
+    'weight' => '5',
     'machine_name' => 'job_admin',
   );
 
   // Exported role: recruiter.
   $roles['recruiter'] = array(
     'name' => 'recruiter',
-    'weight' => '4',
+    'weight' => '3',
     'machine_name' => 'recruiter',
   );
 
