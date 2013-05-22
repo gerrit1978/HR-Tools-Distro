@@ -4,4 +4,4 @@
  * Code for the HR Tools Job Types feature.
  */
 
-include_once 'hr_tools_job_types.features.inc';
+include_once 'hr_tools_job.features.inc';
