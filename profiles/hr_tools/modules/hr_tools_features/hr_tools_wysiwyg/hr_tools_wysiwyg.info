@@ -1,0 +1,10 @@
+name = HR Tools WYSIWYG
+description = Profiles for the CKEditor WYSIWYG editor
+core = 7.x
+package = HR Tools
+version = 7.x-1.0
+project = hr_tools_wysiwyg
+dependencies[] = ckeditor
+features[ckeditor_profile][] = Advanced
+features[ckeditor_profile][] = Full
+features[features_api][] = api:1
