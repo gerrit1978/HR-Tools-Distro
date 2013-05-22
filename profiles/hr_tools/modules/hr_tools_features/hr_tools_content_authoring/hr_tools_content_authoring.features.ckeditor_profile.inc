@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * hr_tools_wysiwyg.features.ckeditor_profile.inc
+ * hr_tools_content_authoring.features.ckeditor_profile.inc
  */
 
 /**
  * Implements hook_ckeditor_profile_defaults().
  */
-function hr_tools_wysiwyg_ckeditor_profile_defaults() {
+function hr_tools_content_authoring_ckeditor_profile_defaults() {
   $data = array(
     'Advanced' => array(
       'name' => 'Advanced',

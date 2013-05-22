@@ -1,9 +1,9 @@
-name = HR Tools WYSIWYG
-description = Profiles for the CKEditor WYSIWYG editor
+name = HR Tools Content Authoring
+description = Content Authoring settings
 core = 7.x
 package = HR Tools
 version = 7.x-1.0
-project = hr_tools_wysiwyg
+project = hr_tools_content_authoring
 dependencies[] = ckeditor
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = Full
