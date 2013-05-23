@@ -5,6 +5,16 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function hr_tools_job_search_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+}
+
+/**
  * Implements hook_views_api().
  */
 function hr_tools_job_search_views_api() {
