@@ -86,6 +86,11 @@ dependencies[] = hr_tools_job_search
 
 ; Message
 dependencies[] = message
+
+; Migrate
+dependencies[] = migrate
+dependencies[] = migrate_extras
+
 ; Other
 dependencies[] = backup_migrate
 dependencies[] = block_class

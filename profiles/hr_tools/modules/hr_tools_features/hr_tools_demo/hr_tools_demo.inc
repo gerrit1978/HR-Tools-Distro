@@ -1,0 +1,15 @@
+name = HR Tools Demo
+description = Import HR Tools demonstration content.
+core = 7.x
+package = HR Tools
+php = 5.2.4
+project = hr_tools_demo
+dependencies[] = ctools
+dependencies[] = date_migrate
+dependencies[] = hr_tools_job
+dependencies[] = features
+dependencies[] = migrate
+dependencies[] = migrate_extras
+features[context][] = hr_tools_demo
+files[] = hr_tools_demo.migrate.inc
+files[] = hr_tools_job_template.migrate.inc

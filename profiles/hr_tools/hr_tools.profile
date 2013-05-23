@@ -103,6 +103,8 @@ function hr_tools_install_additional_modules() {
     'ckeditor_link',
     'imce',
     'block_class',
+    'migrate',
+    'migrate_extras'
     
     // HR Tools Features
     'hr_tools_vocabularies',
