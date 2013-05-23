@@ -65,7 +65,10 @@ function hr_tools_install_tasks($install_state) {
       'display_name' => st('Import terms'),
       'type' => 'batch',
     ),
-    
+    'hr_tools_import_content' => array(
+      'display_name' => st('Import a few demo jobs'),
+      'type' => 'batch',
+    ),
   );
   return $tasks;
 }
@@ -200,3 +203,31 @@ function hr_tools_enable_theme() {
   // Disable the default Bartik theme
   theme_disable(array('bartik'));
 }
+
+
+/**
+ * Task callback for importing demo jobs
+ */
+/**
+ * Task callback: return a batch API array with content migrations to import.
+ */
+function hr_tools_import_content() {
+  exit('content zal nu geimporteerd worden');
+    module_enable(array('hr_tools_demo'));
+    $operations = array();
+
+    // Run all available migrations.
+    $migrations = migrate_migrations();
+    foreach ($migrations as $machine_name => $migration) {
+      $operations[] = array('_hr_tools_demo_import', array($machine_name, t('Importing demo content.')));
+    }
+
+    $batch = array(
+      'title' => t('Importing demo content'),
+      'operations' => $operations,
+      'finished' => 'hc_tools_import_content_finished',
+      'file' => drupal_get_path('profile', 'hr_tools') . '/hr_tools.install_callbacks.inc',
+    );
+
+    return $batch;
+  }
