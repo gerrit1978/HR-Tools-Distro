@@ -104,7 +104,7 @@ function hr_tools_install_additional_modules() {
     'imce',
     'block_class',
     'migrate',
-    'migrate_extras'
+    'migrate_extras',
     
     // HR Tools Features
     'hr_tools_vocabularies',
