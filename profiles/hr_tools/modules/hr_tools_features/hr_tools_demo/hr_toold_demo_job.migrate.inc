@@ -15,7 +15,7 @@ abstract class HrToolsJobMigration extends HrToolsMigration {
   var $path;
 
   /**
-   * The job content type (eg.: job_per_template).
+   * The job content type (eg.: job_template).
    */
   var $type;
 
@@ -43,25 +43,23 @@ abstract class HrToolsJobMigration extends HrToolsMigration {
 
     // Add field mappings common for all job types.
     $this->addFieldMapping('title', 'title');
-    $this->addFieldMapping('body', 'description');
     $this->addFieldMapping('field_job_workflow_state', 'workflow_state');
     $this->addFieldMapping('field_job_company_name', 'organization');
     $this->addFieldMapping('field_job_location', 'location');
 
-    $this->addTermFieldMapping('field_job_region', 'region');
-    $this->addTermFieldMapping('field_job_occupational_field', 'occupational_fields');
-    $this->addTermFieldMapping('field_job_of_study', 'fields_of_study');
-    $this->addTermFieldMapping('field_job_employment_type_term', 'employment_type');
-    $this->addTermFieldMapping('field_job_experience_term', 'experience');
+    $this->addTermFieldMapping('field_job_occupational_fields', 'occupational_fields');
+    $this->addTermFieldMapping('field_job_fields_of_study', 'fields_of_study');
+    $this->addTermFieldMapping('field_job_employment_type', 'employment_type');
+    $this->addTermFieldMapping('field_job_years_of_experience', 'experience');
     $this->addTermFieldMapping('field_job_languages', 'languages');
 
-    $this->addFieldMapping('field_job_email', 'application_email');
+    $this->addFieldMapping('field_job_application_email', 'application_email');
 
     $this->addTermFieldMapping('field_job_skills_it', 'it_skills');
     $this->addTermFieldMapping('field_job_skills_general', 'general_skills');
 
     $this->addFieldMapping('field_job_salary', 'salary');
-    $this->addTermFieldMapping('field_job_degree_level', 'degree_level');
+    $this->addTermFieldMapping('field_job_required_degree_level', 'degree_level');
   }
 
   function addTermFieldMapping($destination_field, $source_field = NULL, $warn_on_override = TRUE) {

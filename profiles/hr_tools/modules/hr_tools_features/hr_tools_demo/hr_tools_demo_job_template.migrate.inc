@@ -7,7 +7,7 @@
 /**
  * Class for importing job per template.
  */
-class HrToolsJobPerTemplateMigration extends HrToolsJobMigration {
+class HrToolsJobTemplateMigration extends HrToolsJobMigration {
 
   public function __construct() {
     $this->path = drupal_get_path('module', 'hr_tools_demo') . '/import/job_template.csv';
