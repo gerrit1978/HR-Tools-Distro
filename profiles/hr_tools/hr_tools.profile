@@ -112,6 +112,7 @@ function hr_tools_install_additional_modules() {
     'hr_tools_job',
     'hr_tools_job_search',
     'hr_tools_content_authoring',
+    'hr_tools_demo',
   );
 
   // Resolve the dependencies now, so that module_enable() doesn't need
