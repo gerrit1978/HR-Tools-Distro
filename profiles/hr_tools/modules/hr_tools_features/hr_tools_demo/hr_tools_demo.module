@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * HR Tools Demonstration module.
@@ -12,7 +13,6 @@ include_once 'hr_tools_demo.features.inc';
  * Implements hook_migrate_api().
  */
 function hr_tools_demo_migrate_api() {
-  exit('hier aangekomen');
   return array(
     'api' => 2,
     'migrations' => array(
