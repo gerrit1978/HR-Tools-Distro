@@ -13,6 +13,10 @@ function hr_tools_job_search_ctools_plugin_api() {
     return array("version" => "3");
   }
   list($module, $api) = func_get_args();
+  if ($module == "current_search" && $api == "current_search") {
+    return array("version" => "1");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "facetapi" && $api == "facetapi_defaults") {
     return array("version" => "1");
   }
@@ -34,7 +38,7 @@ function hr_tools_job_search_default_search_api_index() {
     "name" : "Job Index",
     "machine_name" : "job_index",
     "description" : null,
-    "server" : "search_db",
+    "server" : "search_solr",
     "item_type" : "node",
     "options" : {
       "index_directly" : 1,
@@ -127,7 +131,7 @@ function hr_tools_job_search_default_search_api_index() {
           }
         },
         "search_api_tokenizer" : {
-          "status" : 0,
+          "status" : false,
           "weight" : "20",
           "settings" : {
             "fields" : {
