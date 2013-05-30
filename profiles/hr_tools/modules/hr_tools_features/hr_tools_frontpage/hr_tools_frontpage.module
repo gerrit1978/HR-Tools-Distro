@@ -5,3 +5,18 @@
  */
 
 include_once 'hr_tools_frontpage.features.inc';
+
+/**
+ * Implements hook_views_post_execute().
+ */
+function hc_tools_frontpage_views_post_execute(&$view) {
+  // Set the base path for the facets.
+  if ($view->name == "front_page_job_search") {
+    // Directly change the base path according to the path alias.
+    // Avoids drupal_lookup_path (not in whitelist anymore).
+    $path = 'search/job';
+    $alias = drupal_lookup_path('alias', $path);
+    $base_path = !empty($alias) ? $alias : $path;
+    $view->query->setOption('search_api_base_path', $base_path);
+  }
+}
