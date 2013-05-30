@@ -1,11 +1,15 @@
 name = HR Tools Menu
-description = Provides menus 
+description = Provides menus
 core = 7.x
 package = HR Tools
-version = 7.x-1.0
+php = 5.2.4
+version = 7.x-1.1
 project = hr_tools_menu
+dependencies[] = context
 dependencies[] = features
 dependencies[] = menu
+features[context][] = general_context
+features[ctools][] = context:context:3
 features[features_api][] = api:1
 features[menu_custom][] = main-menu
 features[menu_links][] = main-menu:<front>
