@@ -31,11 +31,17 @@ function hr_tools_job_search_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'current_search-job_current_search' => array(
+          'module' => 'current_search',
+          'delta' => 'job_current_search',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
         'views--exp-job_search-search_page' => array(
           'module' => 'views',
           'delta' => '-exp-job_search-search_page',
           'region' => 'content',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
       ),
     ),
