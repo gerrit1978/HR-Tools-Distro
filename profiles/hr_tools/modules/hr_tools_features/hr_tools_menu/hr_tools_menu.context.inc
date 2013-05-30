@@ -16,7 +16,13 @@ function hr_tools_menu_context_default_contexts() {
   $context->name = 'general_context';
   $context->description = 'A context which is always present';
   $context->tag = 'theme';
-  $context->conditions = array();
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
