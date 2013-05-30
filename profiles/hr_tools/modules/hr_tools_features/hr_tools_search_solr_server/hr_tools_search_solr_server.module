@@ -10,6 +10,7 @@ include_once 'hr_tools_search_solr_server.features.inc';
  * Implements hook_default_search_api_index_alter().
  */
 function hr_tools_search_solr_server_default_search_api_index_alter(&$configs) {
+/*
   // Enable the solr server for the job and resume search.
   $indexes = array('job_index', 'resume_index');
   foreach ($indexes as $index) {
@@ -19,4 +20,5 @@ function hr_tools_search_solr_server_default_search_api_index_alter(&$configs) {
       $configs[$index]->options['processors']['search_api_tokenizer']['status'] = FALSE;
     }
   }
+*/
 }

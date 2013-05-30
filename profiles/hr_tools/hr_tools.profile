@@ -113,7 +113,7 @@ function hr_tools_install_additional_modules() {
     'hr_tools_content_authoring',
     'hr_tools_demo',
     // Search Solr Server: will not be enabled by default
-    'hr_tools_search_solr_server'
+    // 'hr_tools_search_solr_server'
   );
 
   // Resolve the dependencies now, so that module_enable() doesn't need
