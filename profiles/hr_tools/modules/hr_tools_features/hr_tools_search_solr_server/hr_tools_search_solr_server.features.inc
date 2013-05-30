@@ -9,9 +9,9 @@
  */
 function hr_tools_search_solr_server_default_search_api_server() {
   $items = array();
-  $items['solr'] = entity_import('search_api_server', '{
+  $items['search_solr'] = entity_import('search_api_server', '{
     "name" : "Search SOLR",
-    "machine_name" : "solr",
+    "machine_name" : "search_solr",
     "description" : "",
     "class" : "search_api_solr_service",
     "options" : {
