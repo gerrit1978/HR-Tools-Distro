@@ -38,7 +38,7 @@ function hr_tools_job_search_default_search_api_index() {
     "name" : "Job Index",
     "machine_name" : "job_index",
     "description" : null,
-    "server" : "search_solr",
+    "server" : "search_db",
     "item_type" : "node",
     "options" : {
       "index_directly" : 1,
