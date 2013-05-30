@@ -13,8 +13,8 @@ function hr_tools_menu_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'general_context';
-  $context->description = 'A context which is always present';
+  $context->name = 'block_main_menu';
+  $context->description = 'Dummy placement of main menu';
   $context->tag = 'theme';
   $context->conditions = array(
     'sitewide' => array(
@@ -39,9 +39,9 @@ function hr_tools_menu_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('A context which is always present');
+  t('Dummy placement of main menu');
   t('theme');
-  $export['general_context'] = $context;
+  $export['block_main_menu'] = $context;
 
   return $export;
 }
