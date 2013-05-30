@@ -1,0 +1,12 @@
+name = HR Tools Menu
+description = Provides menus 
+core = 7.x
+package = HR Tools
+version = 7.x-1.0
+project = hr_tools_menu
+dependencies[] = features
+dependencies[] = menu
+features[features_api][] = api:1
+features[menu_custom][] = main-menu
+features[menu_links][] = main-menu:<front>
+features[menu_links][] = main-menu:search/job
