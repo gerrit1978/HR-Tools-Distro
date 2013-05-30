@@ -113,6 +113,7 @@ function hr_tools_install_additional_modules() {
     'hr_tools_content_authoring',
     'hr_tools_demo',
     'hr_tools_menus',
+    'hr_tools_frontpage',
     // Search Solr Server: will not be enabled by default
     // 'hr_tools_search_solr_server'
   );

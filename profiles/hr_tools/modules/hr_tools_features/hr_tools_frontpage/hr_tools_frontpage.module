@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HR Tools Frontpage feature.
+ */
+
+include_once 'hr_tools_frontpage.features.inc';

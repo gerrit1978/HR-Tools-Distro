@@ -1,0 +1,15 @@
+name = HR Tools Frontpage
+description = Frontpage blocks and job search
+core = 7.x
+package = HR Tools
+version = 7.x-1.0-alfa1
+project = hr_tools_frontpage
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = facetapi
+dependencies[] = views
+features[context][] = hr_tools_front
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[views_view][] = front_page_job_search
