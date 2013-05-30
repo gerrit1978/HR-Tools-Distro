@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HR Tools Menus feature.
+ */
+
+include_once 'hr_tools_menus.features.inc';

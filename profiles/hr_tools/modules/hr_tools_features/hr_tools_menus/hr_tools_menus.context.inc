@@ -1,20 +1,20 @@
 <?php
 /**
  * @file
- * hr_tools_menu.context.inc
+ * hr_tools_menus.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function hr_tools_menu_context_default_contexts() {
+function hr_tools_menus_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'block_main_menu';
-  $context->description = 'Dummy placement of main menu';
+  $context->name = 'main_menu_block';
+  $context->description = 'Puts main menu in header';
   $context->tag = 'theme';
   $context->conditions = array(
     'sitewide' => array(
@@ -39,9 +39,9 @@ function hr_tools_menu_context_default_contexts() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Dummy placement of main menu');
+  t('Puts main menu in header');
   t('theme');
-  $export['block_main_menu'] = $context;
+  $export['main_menu_block'] = $context;
 
   return $export;
 }

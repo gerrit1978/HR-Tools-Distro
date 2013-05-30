@@ -112,7 +112,7 @@ function hr_tools_install_additional_modules() {
     'hr_tools_job_search',
     'hr_tools_content_authoring',
     'hr_tools_demo',
-    'hr_tools_menu',
+    'hr_tools_menus',
     // Search Solr Server: will not be enabled by default
     // 'hr_tools_search_solr_server'
   );

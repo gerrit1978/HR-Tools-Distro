@@ -1,0 +1,12 @@
+name = HR Tools Menus
+description = Provides menus and menu blocks
+core = 7.x
+package = HR Tools
+version = 7.x-1.0-alfa1
+project = hr_tools_menus
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = system
+features[context][] = main_menu_block
+features[ctools][] = context:context:3
+features[features_api][] = api:1
