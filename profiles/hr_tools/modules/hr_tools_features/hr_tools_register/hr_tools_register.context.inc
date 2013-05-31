@@ -29,7 +29,7 @@ function hr_tools_register_context_default_contexts() {
         'hr_tools_register-applicant_info' => array(
           'module' => 'hr_tools_register',
           'delta' => 'applicant_info',
-          'region' => 'featured',
+          'region' => 'content',
           'weight' => '-10',
         ),
       ),
@@ -62,7 +62,7 @@ function hr_tools_register_context_default_contexts() {
         'hr_tools_register-recruiter_info' => array(
           'module' => 'hr_tools_register',
           'delta' => 'recruiter_info',
-          'region' => 'featured',
+          'region' => 'content',
           'weight' => '-10',
         ),
       ),
