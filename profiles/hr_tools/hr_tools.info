@@ -86,6 +86,7 @@ dependencies[] = hr_tools_job_search
 dependencies[] = hr_tools_demo
 dependencies[] = hr_tools_menus
 dependencies[] = hr_tools_frontpage
+dependencies[] = hr_tools_register
 ; Solr: will not be enabled by default!
 ; dependencies[] = hr_tools_search_solr_server
 
