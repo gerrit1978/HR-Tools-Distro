@@ -104,6 +104,7 @@ function hr_tools_install_additional_modules() {
     'block_class',
     'migrate',
     'migrate_extras',
+    'profile2_page',    
     
     // HR Tools Features
     'hr_tools_vocabularies',
