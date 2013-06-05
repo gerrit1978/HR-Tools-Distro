@@ -5,6 +5,16 @@
  */
 
 /**
+ * Implements hook_ctools_plugin_api().
+ */
+function hr_tools_resume_ctools_plugin_api() {
+  list($module, $api) = func_get_args();
+  if ($module == "page_manager" && $api == "pages_default") {
+    return array("version" => "1");
+  }
+}
+
+/**
  * Implements hook_flag_default_flags().
  */
 function hr_tools_resume_flag_default_flags() {
@@ -41,11 +51,11 @@ function hr_tools_resume_flag_default_flags() {
     'show_on_entity' => 1,
     'show_on_form' => 0,
     'access_author' => '',
-    'api_version' => 2,
     'module' => 'hr_tools_resume',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 2,
   );
   return $flags;
 
