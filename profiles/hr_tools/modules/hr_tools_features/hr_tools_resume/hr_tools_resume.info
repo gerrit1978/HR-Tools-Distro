@@ -24,7 +24,6 @@ dependencies[] = profile2
 dependencies[] = profile2_page
 dependencies[] = taxonomy
 dependencies[] = term_level
-features[ctools][] = page_manager:pages_default:1
 features[features_api][] = api:1
 features[field][] = field_collection_item-field_resume_attachments-field_resume_attachments_file
 features[field][] = field_collection_item-field_resume_education-field_resume_degree_level_term
