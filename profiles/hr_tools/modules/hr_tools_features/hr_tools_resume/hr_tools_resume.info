@@ -22,6 +22,7 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = page_manager
 dependencies[] = profile2
+dependencies[] = profile2_page
 dependencies[] = taxonomy
 dependencies[] = term_level
 features[ctools][] = page_manager:pages_default:1
