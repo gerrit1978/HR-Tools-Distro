@@ -72,7 +72,7 @@ function hr_tools_resume_default_profile2_type() {
     "type" : "resume",
     "label" : "Resume",
     "weight" : "0",
-    "data" : { "use_page" : 1, "page_path" : "resume" },
+    "data" : { "registration" : 0, "use_page" : 1 },
     "rdf_mapping" : []
   }');
   return $items;
