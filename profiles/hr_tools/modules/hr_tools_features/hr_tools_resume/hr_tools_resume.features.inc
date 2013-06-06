@@ -67,12 +67,12 @@ function hr_tools_resume_flag_default_flags() {
 function hr_tools_resume_default_profile2_type() {
   $items = array();
   $items['resume'] = entity_import('profile2_type', '{
-    "userCategory" : true,
-    "userView" : true,
+    "userCategory" : false,
+    "userView" : false,
     "type" : "resume",
     "label" : "Resume",
     "weight" : "0",
-    "data" : { "use_page" : 1, "page_path" : "resume" },
+    "data" : { "registration" : 0, "use_page" : 1 },
     "rdf_mapping" : []
   }');
   return $items;
