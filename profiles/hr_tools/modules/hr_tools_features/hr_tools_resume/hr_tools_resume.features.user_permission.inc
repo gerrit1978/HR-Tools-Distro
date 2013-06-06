@@ -43,8 +43,8 @@ function hr_tools_resume_user_default_permissions() {
     'name' => 'edit own resume profile',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content administrator',
-      2 => 'job administrator',
+      1 => 'applicant',
+      2 => 'content administrator',
     ),
     'module' => 'profile2',
   );
@@ -65,8 +65,8 @@ function hr_tools_resume_user_default_permissions() {
     'name' => 'view own resume profile',
     'roles' => array(
       0 => 'administrator',
-      1 => 'content administrator',
-      2 => 'job administrator',
+      1 => 'applicant',
+      2 => 'content administrator',
     ),
     'module' => 'profile2',
   );
