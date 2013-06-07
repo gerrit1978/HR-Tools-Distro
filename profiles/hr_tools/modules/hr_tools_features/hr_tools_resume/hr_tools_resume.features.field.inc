@@ -440,7 +440,7 @@ function hr_tools_resume_field_default_fields() {
           'label_position' => 'above',
           'no_fieldset' => 0,
           'text_parts' => array(),
-          'year_range' => '-10:+3',
+          'year_range' => '-40:+3',
         ),
         'type' => 'date_select',
         'weight' => '4',
@@ -2112,7 +2112,7 @@ function hr_tools_resume_field_default_fields() {
           'label_position' => 'above',
           'no_fieldset' => 0,
           'text_parts' => array(),
-          'year_range' => '-3:+3',
+          'year_range' => '-40:+3',
         ),
         'type' => 'date_select',
         'weight' => '10',
@@ -2545,7 +2545,7 @@ function hr_tools_resume_field_default_fields() {
   $fields['profile2-resume-field_resume_education'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_resume_education',
@@ -2973,7 +2973,7 @@ function hr_tools_resume_field_default_fields() {
   $fields['profile2-resume-field_resume_work_xp'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_resume_work_xp',
