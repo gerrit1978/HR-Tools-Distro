@@ -15,7 +15,6 @@ include_once 'hr_tools_resume.features.inc';
  * Implements hook_menu_alter
  */
 function hr_tools_resume_menu_alter(&$items) {
-  watchdog('hr_tools_resume', 'hook_menu_alter called');
   $items['resume']['access callback'] = '_hr_tools_resume_menu_access_callback';
 }
 
