@@ -85,3 +85,39 @@ function hr_tools_resume_default_profile2_type() {
   }');
   return $items;
 }
+
+/**
+ * Implements hook_default_rules_link().
+ */
+function hr_tools_resume_default_rules_link() {
+  $items = array();
+  $items['resume_set_hidden'] = entity_import('rules_link', '{
+    "settings" : {
+      "text" : "Hide resume",
+      "link_type" : "confirm",
+      "bundles" : { "resume" : "resume" },
+      "entity_link" : 0,
+      "confirm_question" : "Are you sure you want to hide your resume?",
+      "confirm_description" : "Hiding your resume will exclude you from searches and being contacted by companies. You can always re-activate your resume. "
+    },
+    "name" : "resume_set_hidden",
+    "label" : "Resume set hidden",
+    "path" : "resume_set_hidden",
+    "entity_type" : "profile2",
+    "rdf_mapping" : []
+  }');
+  $items['resume_set_visible'] = entity_import('rules_link', '{
+    "settings" : {
+      "text" : "Show resume",
+      "link_type" : "token",
+      "bundles" : { "resume" : "resume" },
+      "entity_link" : 0
+    },
+    "name" : "resume_set_visible",
+    "label" : "Resume set visible",
+    "path" : "resume_set_visible",
+    "entity_type" : "profile2",
+    "rdf_mapping" : []
+  }');
+  return $items;
+}
