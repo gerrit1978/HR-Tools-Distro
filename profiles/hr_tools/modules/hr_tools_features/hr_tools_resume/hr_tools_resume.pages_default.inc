@@ -85,6 +85,28 @@ function hr_tools_resume_default_page_manager_handlers() {
     $pane->uuid = '25285bee-ef0e-b674-4133-4c72f3e6df31';
     $display->content['new-25285bee-ef0e-b674-4133-4c72f3e6df31'] = $pane;
     $display->panels['middle'][0] = 'new-25285bee-ef0e-b674-4133-4c72f3e6df31';
+    $pane = new stdClass();
+    $pane->pid = 'new-ee0d9cb6-625a-63e4-4539-256f3da39e13';
+    $pane->panel = 'middle';
+    $pane->type = 'block';
+    $pane->subtype = 'user-login';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'ee0d9cb6-625a-63e4-4539-256f3da39e13';
+    $display->content['new-ee0d9cb6-625a-63e4-4539-256f3da39e13'] = $pane;
+    $display->panels['middle'][1] = 'new-ee0d9cb6-625a-63e4-4539-256f3da39e13';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-25285bee-ef0e-b674-4133-4c72f3e6df31';
   $handler->conf['display'] = $display;
