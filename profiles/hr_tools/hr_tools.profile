@@ -110,6 +110,7 @@ function hr_tools_install_additional_modules() {
     'hr_tools_vocabularies',
     'hr_tools_search_database_server',
     'hr_tools_job',
+    'hr_tools_job_application',
     'hr_tools_job_search',
     'hr_tools_content_authoring',
     'hr_tools_demo',
