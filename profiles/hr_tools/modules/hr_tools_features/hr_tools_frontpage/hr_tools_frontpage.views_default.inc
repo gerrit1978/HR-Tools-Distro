@@ -63,26 +63,29 @@ function hr_tools_frontpage_views_default_views() {
   $handler->display->display_options['header']['result']['table'] = 'views';
   $handler->display->display_options['header']['result']['field'] = 'result';
   $handler->display->display_options['header']['result']['content'] = '<h2 class="hot-jobs-summary">Top @per_page of <a href="/search/job">@total</a> total jobs.</h2>';
+  /* Field: Indexed Node: URL */
+  $handler->display->display_options['fields']['url']['id'] = 'url';
+  $handler->display->display_options['fields']['url']['table'] = 'search_api_index_job_index';
+  $handler->display->display_options['fields']['url']['field'] = 'url';
+  $handler->display->display_options['fields']['url']['label'] = '';
+  $handler->display->display_options['fields']['url']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['url']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['url']['display_as_link'] = FALSE;
+  $handler->display->display_options['fields']['url']['link_to_entity'] = 0;
   /* Field: Indexed Node: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'search_api_index_job_index';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['make_link'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['path'] = '[job_url]';
+  $handler->display->display_options['fields']['title']['alter']['path'] = '[url]';
   $handler->display->display_options['fields']['title']['alter']['absolute'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['link_class'] = 'recruiter-job-link';
   $handler->display->display_options['fields']['title']['element_type'] = 'div';
   $handler->display->display_options['fields']['title']['link_to_entity'] = 0;
-  /* Field: Indexed Node: Company Description */
-  $handler->display->display_options['fields']['field_job_company']['id'] = 'field_job_company';
-  $handler->display->display_options['fields']['field_job_company']['table'] = 'search_api_index_job_index';
-  $handler->display->display_options['fields']['field_job_company']['field'] = 'field_job_company';
   /* Field: Indexed Node: Location */
   $handler->display->display_options['fields']['field_job_location']['id'] = 'field_job_location';
   $handler->display->display_options['fields']['field_job_location']['table'] = 'search_api_index_job_index';
   $handler->display->display_options['fields']['field_job_location']['field'] = 'field_job_location';
-  $handler->display->display_options['fields']['field_job_location']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_job_location']['alter']['text'] = ', [field_job_location]';
   /* Sort criterion: Indexed Node: Date changed */
   $handler->display->display_options['sorts']['changed']['id'] = 'changed';
   $handler->display->display_options['sorts']['changed']['table'] = 'search_api_index_job_index';
