@@ -34,7 +34,7 @@ dependencies[] = context_admin_vbo
 ; Core
 dependencies[] = block
 dependencies[] = color
-; dependencies[] = comment
+dependencies[] = comment
 dependencies[] = contextual
 dependencies[] = dashboard
 dependencies[] = dblog
